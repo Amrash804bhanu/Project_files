@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nestfarm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html {
+      font-size: 62.5%;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 5rem 5rem 10rem;
+      line-height: 2;
+      font-family: 'Nunito Sans', sans-serif;
+      color: #555;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, rgb(139, 242, 139), #fcfdfd);
+    }
+
+    h1 {
+      font-family: 'Josefin Sans', 'Sans-serif';
+      text-transform: capitalize;
+      font-size: 6rem;
+      color: white;
+      text-align: center;
+      position: relative;
+      word-spacing: 3px;
+    }
+
+    h1::before {
+      content: '';
+      display: block;
+      height: 65%;
+      width: 49%;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      background: linear-gradient(to bottom, #016b0c, #a6f6e3);
+      opacity: 0.8;
+      z-index: -1;
+      transform: skewY(370deg) translate(-50%, -50%);
+      transform: skewX(200deg) translate(-50%, -50%);
+      border-radius: 20px;
+    }
+
+    .container {
+      width: 90rem;
+      margin: 0 auto;
+    }
+
+    .cards-contain {
+      margin-top: 10px;
+
+      display: flex;
+    }
+
+    .card {
+      background: white;
+      box-shadow: 0 4rem 7rem 3rem rgba(0, 0, 0, 0.15);
+      margin-top: 19%;
+      border-radius: 30px;
+      margin-bottom: 5rem;
+      transform: skewX(-10deg);
+      display: flex;
+      transition: all 0.5s;
+      height: 60px;
+      width: 90%;
+    }
+
+    .card-1 {
+      margin-top: 10px;
+    }
+
+    .card__title-box {
+      background: linear-gradient(to bottom, #9be15d, #00e3ae);
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      padding: 0 3rem;
+    }
+    .card__title {
+      font-family: 'Josefin Sans', sans-serif;
+      color: white;
+      font-size: 3.25rem;
+      transform: skewX(20deg);
+    }
+    .card__detail {
+      display: flex;
+    }
+
+    .card__detail-box {
+      align-self: none;
+      border-right: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+    }
+
+    .card__detail-box:last-child {
+      border: none;
+    }
+
+    .card__detail {
+      font-weight: 400;
+      font-size: 1.8rem;
+      transform: skewX(10deg);
+      padding: 1.75rem;
+    }
+    .card__detail--organic {
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      margin-right: 20px;
+      background-image: linear-gradient(to right, #9be15d, #00e3ae);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card__detail--price {
+      font-weight: 900;
+      font-size: 1.9rem;
+    }
+
+    .card__detail {
+      display: flex;
+    }
+
+    .card__link:link,
+    .card__link:visited {
+      flex: 0 0 auto;
+      background-color: #79e17b;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 2.5rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .card__link {
+      height: 30px;
+      border-radius: 30px;
+      margin-left: 10px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .card:hover {
+      transform: skew(-10deg) scale(1.1);
+      box-shadow: 0 4rem 5rem 4rem rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Farm Fest</h1>
+      <div class="card-contain">{%PRODUCT_CARDS%}</div>
+    </div>
+  </body>
+</html>
