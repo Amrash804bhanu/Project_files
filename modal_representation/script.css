@@ -1,0 +1,80 @@
+* {
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+.modal-open {
+  border: 1 px solid black;
+  background-color: #76abae;
+  display: flex-column;
+  padding: 20px;
+  margin-left: 60px;
+  justify-items: center;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  background-color: #31363f;
+  border-color: black;
+  box-shadow: 20px 0px 10px #eeeeee;
+  border-radius: 5px;
+  color: white;
+  font-size: larger;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+p {
+  font-size: 1.6rem;
+  background-color: white;
+  color: black;
+  margin: 10px 10px 10px 20px;
+  padding: 10px;
+}
+
+/* classes to make the modal */
+
+.hide {
+  display: none;
+}
+
+/* the window of the model displayed is alterated */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+
+  background-color: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+/* this is the background of he window when printed  */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 8;
+}
